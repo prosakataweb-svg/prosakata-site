@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ProSakata Studio – Websites only. Modern & classic.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Galaxy background -->
+  <canvas id="spaceCanvas"></canvas>
+
+  <!-- ========== PAGE 1 – INTRO / WORLD ========== -->
+  <section id="introSection">
+    <div class="intro-overlay">
+      <div class="intro-content">
+        <div class="intro-kawkab k1"></div>
+        <div class="intro-kawkab k2"></div>
+        <div class="intro-kawkab k3"></div>
+
+        <div class="intro-label">WELCOME TRAVELLER</div>
+        <h1 class="intro-title">
+          Welcome to the world of
+          <span>ProSakata</span>
+        </h1>
+        <p class="intro-subtitle">
+          A studio focused on building clear, modern websites – from clean business
+          sites to playful experiences with smooth motion and interaction.
+        </p>
+
+        <div class="intro-actions">
+          <button id="enterWorld" class="intro-main-btn">
+            <span>Enter ProSakata Studio</span> →
+          </button>
+          <p class="intro-hint">
+            Click to step into the main studio page.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PAGE 2 – MAIN STUDIO ========== -->
+  <div id="mainSection" class="hidden">
+    <!-- Robots background -->
+    <div class="robots-bg">
+      <div class="robot robot-left">
+        <div class="robot-head"></div>
+        <div class="robot-body"></div>
+      </div>
+      <div class="robot robot-right">
+        <div class="robot-head"></div>
+        <div class="robot-body"></div>
+      </div>
+    </div>
+
+    <!-- Sticky nav -->
+    <header class="main-nav">
+      <div class="nav-content">
+        <div class="nav-logo">
+          <div class="nav-logo-badge">PS</div>
+          <div>
+            <div>PROSAKATA STUDIO</div>
+            <small>WEBSITES ONLY. MODERN &amp; CLASSIC.</small>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#web-types">Web types</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#pricing">Pricing approach</a>
+          <a href="#hire">Hire us</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <div class="main-inner">
+      <!-- HERO -->
+      <section id="top">
+        <div class="hero-grid">
+          <div>
+            <h1 class="hero-heading">
+              We build websites that feel like a <span>world</span> – not just a
+              template.
+            </h1>
+            <p class="hero-sub">
+              ProSakata Studio focuses 100% on websites: clear structure, good
+              performance and details that make your brand feel trustworthy online.
+              No distractions, no generic themes – just tailored web experiences.
+            </p>
+
+            <div class="hero-tags">
+              <span class="tag-pill">Modern, interactive websites</span>
+              <span class="tag-pill">Clean business websites</span>
+              <span class="tag-pill">Fast &amp; responsive</span>
+              <span class="tag-pill">Focused on conversions</span>
+            </div>
+
+            <div class="hero-cta-row">
+              <button class="btn-primary" onclick="document.getElementById('hire').scrollIntoView({behavior:'smooth'})">
+                Hire ProSakata Studio ✨
+              </button>
+              <button class="btn-outline" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+                View services
+              </button>
+            </div>
+          </div>
+
+          <aside class="hero-right-card">
+            <div class="hero-right-chip">FOCUSED STUDIO</div>
+            <h3 class="hero-right-title">Only websites. Nothing else.</h3>
+            <p class="hero-right-sub">
+              We don’t do branding, logos or social media. We do <strong>websites</strong>.
+              That’s why we can go deeper on details most agencies skip.
+            </p>
+
+            <ul class="hero-feature-list">
+              <li>Interaction &amp; motion-friendly layouts</li>
+              <li>Mobile-first building</li>
+              <li>Clean, maintainable code</li>
+              <li>SEO-friendly foundations</li>
+              <li>Clear structure &amp; copy</li>
+              <li>Real people support</li>
+            </ul>
+
+            <div class="hero-robot-orbit">
+              <div class="hero-robot-core"></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services">
+        <div class="section-label">SERVICES</div>
+        <div class="section-title-row">
+          <h2>What we do</h2>
+          <p>Websites only – from simple one-pagers to richer, interactive layouts.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="card-tag">Modern &amp; interactive</div>
+            <h3>Modern websites &amp; smooth interactions</h3>
+            <p>
+              Sites that feel alive without being noisy: subtle motion, micro-interactions
+              and layouts that guide visitors naturally.
+            </p>
+            <ul class="list-bullets">
+              <li>Hero sections that react to scrolling or cursor</li>
+              <li>Soft particle / space / tech-inspired themes</li>
+              <li>Optimised for performance, not just effects</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-tag">Business Websites</div>
+            <h3>Clean, professional websites</h3>
+            <p>
+              Structured, trustworthy sites for studios, cafés, restaurants and
+              personal brands that want clarity and speed.
+            </p>
+            <ul class="list-bullets">
+              <li>Clear information architecture</li>
+              <li>Responsive on all modern devices</li>
+              <li>Copy layout focused on conversion</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-tag">Landing Pages</div>
+            <h3>High-impact landing pages</h3>
+            <p>
+              Focused one-page sites for product launches, offers or campaigns, with
+              sharp CTAs and minimal distractions.
+            </p>
+            <ul class="list-bullets">
+              <li>Fast to load, fast to understand</li>
+              <li>Ideal for ads and quick tests</li>
+              <li>Easy to expand into a full site later</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- WEB TYPES -->
+      <section id="web-types">
+        <div class="section-label">WEB TYPES WE BUILD</div>
+        <div class="section-title-row">
+          <h2>Websites we are best at</h2>
+          <p>We focus on a small set of website types – and do them very well.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Modern interactive sites</h3>
+            <p>
+              Websites with motion, storytelling and small interactions that keep
+              visitors engaged and curious.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Business &amp; studio websites</h3>
+            <p>
+              For digital studios, agencies, cafés, restaurants and services that
+              need a serious, modern and credible presence.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Personal brands &amp; portfolios</h3>
+            <p>
+              For creators and professionals that want a sharp, minimal website that
+              looks “designed”, not generic.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Restaurant &amp; café websites</h3>
+            <p>
+              Menus, locations, reservations and a clear story – without fake AI text
+              on the screen. Just what real guests need.
+            </p>
+          </article>
+          <article class="card">
+            <h3>One-page funnels</h3>
+            <p>
+              Traffic-friendly landing pages focused on one action: booking, calling
+              or sending a message.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Refined redesigns</h3>
+            <p>
+              Take your current website and rebuild it with better structure,
+              performance and a modern look.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section id="testimonials">
+        <div class="section-label">TESTIMONIALS</div>
+        <div class="section-title-row">
+          <h2>What clients will feel</h2>
+          <p>How working with ProSakata Studio should feel for you.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card testimonial-card">
+            <div class="testimonial-quote-mark">“</div>
+            <p class="testimonial-text">
+              Everything just feels clear. Clean structure, fast responses and a site
+              that finally looks like it belongs to our brand.
+            </p>
+            <p class="testimonial-author">
+              <strong>Clarity &amp; trust</strong> · business owners
+            </p>
+          </article>
+
+          <article class="card testimonial-card">
+            <div class="testimonial-quote-mark">“</div>
+            <p class="testimonial-text">
+              We didn’t get a random template. We got a site that feels tailored to us
+              and that guests remember and talk about.
+            </p>
+            <p class="testimonial-author">
+              <strong>Memorable experiences</strong> · cafés &amp; studios
+            </p>
+          </article>
+
+          <article class="card testimonial-card">
+            <div class="testimonial-quote-mark">“</div>
+            <p class="testimonial-text">
+              ProSakata explains choices, keeps things realistic and focuses on what
+              will actually convert – not just what looks cool.
+            </p>
+            <p class="testimonial-author">
+              <strong>Honest guidance</strong> · founders &amp; creators
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- PRICING APPROACH -->
+      <section id="pricing">
+        <div class="section-label">PRICING APPROACH</div>
+        <div class="section-title-row">
+          <h2>How we think about pricing</h2>
+          <p>No fixed “packages” – just clear scope and value-based pricing.</p>
+        </div>
+
+        <div class="pricing-layout">
+          <article class="card">
+            <h3>Transparent, project-based pricing</h3>
+            <p>
+              We don’t show random numbers on the website. Every project is priced
+              based on:
+            </p>
+            <ul class="list-bullets">
+              <li>Type of website (landing page, full site, interactive)</li>
+              <li>Number of pages &amp; custom sections</li>
+              <li>Content complexity &amp; integrations</li>
+              <li>Timeline and launch support</li>
+            </ul>
+            <p style="margin-top:0.6rem;">
+              You always see what is included and what can be added later.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="badge-pill">No surprise invoices</span>
+            <p style="margin-top:0.6rem;">
+              We agree on a clear scope before we start. If you want extra features,
+              we quote them separately – no hidden fees, no pressure.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- HIRE US -->
+      <section id="hire">
+        <div class="section-label">HIRE PROSAKATA STUDIO</div>
+        <div class="section-title-row">
+          <h2>Ready to build your new site?</h2>
+          <p>Tell us about your idea, budget and deadline. We’ll answer with a simple plan.</p>
+        </div>
+
+        <article class="card hire-card">
+          <p>
+            Share a short description of your business, what kind of website you want
+            (simple, advanced, with or without animations), and any examples you like.
+            We reply with next steps and a realistic range – not a sales pitch.
+          </p>
+          <div class="hire-buttons">
+            <a class="btn-primary" href="mailto:prosakata.web@gmail.com">
+              Email ProSakata Studio
+            </a>
+            <a class="btn-outline" href="https://t.me/ProSakataStudio" target="_blank" rel="noopener">
+              Chat on Telegram
+            </a>
+            <a class="btn-outline" href="https://wa.me/421915383968" target="_blank" rel="noopener">
+              WhatsApp message
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="section-label">CONTACT</div>
+        <div class="section-title-row">
+          <h2>Stay in touch</h2>
+          <p>Pick the channel that works best for you.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-item">
+            <div class="contact-label">Email</div>
+            <div class="contact-value">
+              <a href="mailto:prosakata.web@gmail.com">prosakata.web@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-label">Telegram</div>
+            <div class="contact-value">
+              <a href="https://t.me/ProSakataStudio" target="_blank" rel="noopener">@ProSakataStudio</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-label">WhatsApp</div>
+            <div class="contact-value">
+              <a href="https://wa.me/421915383968" target="_blank" rel="noopener">
+                +421 915 383 968
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          © <span id="yearSpan"></span> ProSakata Studio. Websites only.
+        </footer>
+      </section>
+    </div>
+  </div>
+
+  <!-- Mobile chat button (only visible on phones) -->
+  <a
+    href="https://www.chatbase.co/chatbot-iframe/ahNQzFLdkcOoipmLcYTgT"
+    class="mobile-chat-btn"
+    target="_blank"
+    rel="noopener"
+    aria-label="Open ProSakata AI chat"
+  >
+    ✨
+  </a>
+
+  <!-- main JS -->
+  <script src="script.js" defer></script>
+
+  <!-- Chatbase AI widget -->
+  <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="ahNQzFLdkcOoipmLcYTgT";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+  </script>
+</body>
+</html>
