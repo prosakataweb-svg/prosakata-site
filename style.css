@@ -28,7 +28,9 @@ body {
     radial-gradient(circle at 15% 0%, rgba(56, 189, 248, 0.22), transparent 55%),
     radial-gradient(circle at 85% 0%, rgba(37, 99, 235, 0.25), transparent 55%),
     linear-gradient(180deg, #020617 0%, #020818 45%, #00010a 100%);
-  overflow: hidden;
+  /* نخلي scroll عمودي متاح دايماً ونحبس غير الأفقي */
+  overflow-x: hidden;
+  overflow-y: auto;
   transition: background 0.4s ease;
   scroll-behavior: smooth;
 }
@@ -38,8 +40,6 @@ body.main-active {
     radial-gradient(circle at 10% 0%, rgba(37, 99, 235, 0.18), transparent 55%),
     radial-gradient(circle at 90% 100%, rgba(56, 189, 248, 0.18), transparent 55%),
     linear-gradient(180deg, #020617 0%, #020617 40%, #020617 100%);
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 /* GLOBAL HELPERS */
@@ -256,7 +256,7 @@ a:hover {
   z-index: 1;
 }
 
-/* STATUS PILL (احتياطي إلا بغيتي ترجعو) */
+/* STATUS PILL */
 
 .intro-status-pill {
   display: inline-flex;
@@ -1190,10 +1190,6 @@ section[id] {
 
 /* موبايل */
 @media (max-width: 600px) {
-  body.main-active {
-    overflow-y: auto;
-  }
-
   #introSection {
     padding-top: 0.5rem;
   }
