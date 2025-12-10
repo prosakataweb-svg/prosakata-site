@@ -28,9 +28,7 @@ body {
     radial-gradient(circle at 15% 0%, rgba(56, 189, 248, 0.22), transparent 55%),
     radial-gradient(circle at 85% 0%, rgba(37, 99, 235, 0.25), transparent 55%),
     linear-gradient(180deg, #020617 0%, #020818 45%, #00010a 100%);
-  /* نخلي scroll عمودي متاح دايماً ونحبس غير الأفقي */
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   transition: background 0.4s ease;
   scroll-behavior: smooth;
 }
@@ -40,6 +38,8 @@ body.main-active {
     radial-gradient(circle at 10% 0%, rgba(37, 99, 235, 0.18), transparent 55%),
     radial-gradient(circle at 90% 100%, rgba(56, 189, 248, 0.18), transparent 55%),
     linear-gradient(180deg, #020617 0%, #020617 40%, #020617 100%);
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /* GLOBAL HELPERS */
@@ -75,7 +75,7 @@ a:hover {
 #introSection {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh; /* بدل height:100vh */
   overflow: hidden;
   opacity: 1;
   transform: translateY(0);
@@ -1191,43 +1191,60 @@ section[id] {
 /* موبايل */
 @media (max-width: 600px) {
   #introSection {
-    padding-top: 0.5rem;
+    min-height: 100vh;
+    padding-top: 0.4rem;
   }
 
   .intro-overlay {
-    padding: 1.2rem;
+    padding: 1.1rem;
+    align-items: flex-start;
   }
 
   .intro-content {
-    padding: 2.1rem 1.4rem 2rem;
-    border-radius: 1.4rem;
+    margin-top: 0.6rem;
+    padding: 1.6rem 1.3rem 1.4rem;
+    border-radius: 1.3rem;
   }
 
   .intro-title {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
+    margin-bottom: 0.6rem;
   }
 
   .intro-subtitle {
-    font-size: 0.9rem;
-    margin-bottom: 1.1rem;
+    font-size: 0.86rem;
+    margin-bottom: 0.8rem;
   }
 
   .intro-facts {
     gap: 0.6rem;
+    margin-bottom: 0.5rem;
   }
 
   .intro-fact {
     width: 100%;
+    padding: 0.5rem 0.9rem;
+  }
+
+  .intro-mini-note {
+    font-size: 0.78rem;
+    margin-bottom: 0.8rem;
   }
 
   .intro-stats {
     flex-direction: column;
     align-items: stretch;
+    gap: 0.5rem;
   }
 
   .intro-main-btn {
     width: 100%;
     justify-content: center;
+    padding: 0.75rem 1.7rem;
+  }
+
+  .intro-hint {
+    font-size: 0.78rem;
   }
 
   .robots-bg {
@@ -1308,149 +1325,37 @@ section[id] {
     font-size: 0.78rem;
   }
 }
-/* موبايل */
-@media (max-width: 600px) {
-  /* نخلي الارتفاع مرن وماشي 100vh قاصحة */
-  #introSection {
-    height: auto;
-    min-height: 100vh;
-    padding-top: 0.4rem;
-  }
 
-  .intro-overlay {
-    padding: 1.1rem;
-    align-items: flex-start; /* بدل center باش الكارد يطلع شوية الفوق */
-  }
-
+/* موبايل صغير بزاف */
+@media (max-width: 420px) {
   .intro-content {
-    margin-top: 0.6rem;
-    padding: 1.6rem 1.3rem 1.4rem;
-    border-radius: 1.3rem;
+    padding: 1.8rem 1.2rem 1.8rem;
   }
 
   .intro-title {
     font-size: 1.7rem;
-    margin-bottom: 0.6rem;
   }
 
   .intro-subtitle {
-    font-size: 0.86rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .intro-facts {
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .intro-fact {
-    width: 100%;
-    padding: 0.5rem 0.9rem;
-  }
-
-  .intro-mini-note {
-    font-size: 0.78rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .intro-main-btn {
-    width: 100%;
-    justify-content: center;
-    padding: 0.75rem 1.7rem;
-  }
-
-  .intro-hint {
-    font-size: 0.78rem;
-  }
-
-  .intro-stats {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.5rem;
-    font-size: 0.76rem;
-    margin-top: 0.5rem;
-  }
-
-  .intro-stat-item {
-    padding: 0.35rem 0.7rem;
-  }
-
-  /* باقي الصفحة بحال ما هي */
-  .robots-bg {
-    display: none;
-  }
-
-  .main-inner {
-    padding: 1.1rem 0.9rem 3rem;
+    font-size: 0.84rem;
   }
 
   .hero-heading {
-    font-size: 1.7rem;
+    font-size: 1.55rem;
   }
 
-  .hero-sub {
-    font-size: 0.86rem;
+  .hero-right-card {
+    padding: 1.1rem 1rem 1rem;
   }
 
-  .hero-tags {
-    gap: 0.45rem;
-  }
-
-  .tag-pill {
-    font-size: 0.74rem;
-    padding-inline: 0.55rem;
-  }
-
-  .hero-cta-row {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .btn-primary,
-  .btn-outline {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .card {
-    padding: 0.95rem 0.9rem;
-    border-radius: 1rem;
-  }
-
-  .section-title-row h2 {
-    font-size: 1.1rem;
-  }
-
-  .section-title-row p {
-    font-size: 0.8rem;
-  }
-
-  .hire-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .nav-content {
-    padding-inline: 0.9rem;
-  }
-
-  .nav-links {
-    overflow-x: auto;
-    padding-bottom: 0.3rem;
-    gap: 0.5rem;
-  }
-
-  .nav-links::-webkit-scrollbar {
-    height: 4px;
-  }
-
-  .nav-links a {
-    white-space: nowrap;
-    padding-inline: 0.7rem;
+  .hero-feature-list {
     font-size: 0.78rem;
+  }
+}
+
+/* نخلي زر الشات يبان غير فالتلفون والتابلت */
+@media (max-width: 768px) {
+  .mobile-chat-btn {
+    display: flex;
   }
 }
