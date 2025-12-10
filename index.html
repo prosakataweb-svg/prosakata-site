@@ -15,27 +15,73 @@
   <section id="introSection">
     <div class="intro-overlay">
       <div class="intro-content">
-        <div class="intro-kawkab k1"></div>
-        <div class="intro-kawkab k2"></div>
-        <div class="intro-kawkab k3"></div>
-
+        <!-- Label -->
         <div class="intro-label">WELCOME TRAVELLER</div>
+
+        <!-- Main title -->
         <h1 class="intro-title">
           Welcome to the world of
           <span>ProSakata</span>
         </h1>
+
+        <!-- Subtitle -->
         <p class="intro-subtitle">
           A studio focused on building clear, modern websites – from clean business
           sites to playful experiences with smooth motion and interaction.
         </p>
 
+        <!-- QUICK FACTS ABOUT PROSAKATA -->
+        <div class="intro-facts">
+          <div class="intro-fact">
+            <div class="intro-fact-label">FOCUS</div>
+            <div class="intro-fact-value">Websites only</div>
+          </div>
+
+          <div class="intro-fact">
+            <div class="intro-fact-label">STYLE</div>
+            <div class="intro-fact-value">Modern &amp; classic</div>
+          </div>
+
+          <div class="intro-fact">
+            <div class="intro-fact-label">FOR</div>
+            <div class="intro-fact-value">Studios, cafés &amp; brands</div>
+          </div>
+        </div>
+
+        <!-- Mini note under facts -->
+        <p class="intro-mini-note">
+          Made for small studios, cafés, restaurants and personal brands that care about how their website feels.
+        </p>
+
+        <!-- CTA + scroll hint + mini stats -->
         <div class="intro-actions">
           <button id="enterWorld" class="intro-main-btn">
             <span>Enter ProSakata Studio</span> →
           </button>
+
           <p class="intro-hint">
             Click to step into the main studio page.
           </p>
+
+          <div class="intro-scroll-hint">
+            Scroll to see what we build
+            <span class="intro-scroll-arrow">↓</span>
+          </div>
+
+          <div class="intro-stats">
+            <div class="intro-stat-item">
+              <span class="intro-stat-label">STUDIO TYPE</span>
+              <span class="intro-stat-value">Independent, one-person studio</span>
+            </div>
+            <div class="intro-stat-item">
+              <span class="intro-stat-label">TYPICAL TIMELINE</span>
+              <span class="intro-stat-value">1–3 weeks for a full website</span>
+            </div>
+            <div class="intro-stat-item">
+              <span class="intro-stat-label">LANGUAGES</span>
+              <span class="intro-stat-value">Available in all languages</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -386,7 +432,7 @@
     </div>
   </div>
 
-  <!-- Mobile chat button (only visible on phones) -->
+  <!-- Mobile chat button (only visible on phones / tablets) -->
   <a
     href="https://www.chatbase.co/chatbot-iframe/ahNQzFLdkcOoipmLcYTgT"
     class="mobile-chat-btn"
@@ -402,7 +448,32 @@
 
   <!-- Chatbase AI widget -->
   <script>
-    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="ahNQzFLdkcOoipmLcYTgT";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    (function(){
+      if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+        window.chatbase = (...arguments) => {
+          if (!window.chatbase.q) { window.chatbase.q = []; }
+          window.chatbase.q.push(arguments);
+        };
+        window.chatbase = new Proxy(window.chatbase, {
+          get(target, prop) {
+            if (prop === "q") { return target.q; }
+            return (...args) => target(prop, ...args);
+          }
+        });
+      }
+      const onLoad = function () {
+        const script = document.createElement("script");
+        script.src = "https://www.chatbase.co/embed.min.js";
+        script.id = "ahNQzFLdkcOoipmLcYTgT";
+        script.domain = "www.chatbase.co";
+        document.body.appendChild(script);
+      };
+      if (document.readyState === "complete") {
+        onLoad();
+      } else {
+        window.addEventListener("load", onLoad);
+      }
+    })();
   </script>
 </body>
 </html>
