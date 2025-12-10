@@ -10,7 +10,7 @@ if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
 }
 
-// ========== INTRO -> MAIN TRANSITION (fade خفيف) ==========
+// ========== INTRO -> MAIN TRANSITION ==========
 if (enterBtn && intro && mainSection) {
   let hasEntered = false;
 
@@ -18,19 +18,14 @@ if (enterBtn && intro && mainSection) {
     if (hasEntered) return;
     hasEntered = true;
 
-    // نبدل الخلفية للستايل ديال الصفحة 2
     body.classList.add("main-active");
-
-    // خروج ناعم للصفحة 1
     intro.classList.add("fade-out");
 
-    // نبيّنو الصفحة 2
     mainSection.classList.remove("hidden");
     requestAnimationFrame(() => {
       mainSection.classList.add("active");
     });
 
-    // نطفي الخلفية ديال الفضاء (canvas) باش مايبقاش داك الشريط البنفسجي لتحت
     if (spaceCanvas) {
       spaceCanvas.style.transition = "opacity 0.6s ease";
       spaceCanvas.style.opacity = "0";
@@ -40,7 +35,6 @@ if (enterBtn && intro && mainSection) {
       }, 650);
     }
 
-    // من بعد شوية نحيد الصفحة 1 نهائيا
     setTimeout(() => {
       intro.classList.add("hidden");
     }, 500);
@@ -93,7 +87,6 @@ if (spaceCanvas) {
     const w = spaceCanvas.width;
     const h = spaceCanvas.height;
 
-    // background gradient
     const gradient = ctx.createRadialGradient(
       w / 2,
       h * 0.2,
@@ -109,7 +102,6 @@ if (spaceCanvas) {
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, w, h);
 
-    // stars
     for (const s of stars) {
       ctx.beginPath();
       ctx.globalAlpha = s.alpha;
